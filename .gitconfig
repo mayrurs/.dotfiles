@@ -1,9 +1,12 @@
-[alias]
-	ci = commit
-	edit = "!vim `git ls-files -m` -p"
-[diff] 
-	tool = vimdiff
-[difftool]
-	prompt = false
+[user]
+	name = mayrurs
+	email = urs.mayr@outlook.com
 [core]
-	symlinks=true
+	editor = vim
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[difftool]
+	prompt = 0
