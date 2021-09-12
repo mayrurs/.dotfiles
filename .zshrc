@@ -55,7 +55,9 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -87,10 +89,7 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ll='ls -la'a
-alias projects='cd ~/Projects'
-alias venv='cd ~/Virtualenvs'
-alias venv-spark='source ~/Virtualenvs/spark/bin/activate'
+alias ll='ls -la'
 
 # Enable Vim style navigation
 bindkey -v
