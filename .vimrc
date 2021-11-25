@@ -26,6 +26,7 @@ Plugin 'vim-airline/vim-airline' "Required for: Status line
 Plugin 'vim-airline/vim-airline-themes'  "Required for: Theme status line
 Plugin 'tpope/vim-fugitive'  "Required for: Showing git information in status line 
 Plugin 'vimwiki/vimwiki'
+Plugin 'iamcco/markdown-preview.nvim' 
 
 call vundle#end()            " required
 filetype plugin indent on    " required
