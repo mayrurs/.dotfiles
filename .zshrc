@@ -57,6 +57,8 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
+	docker 
+	docker-compose
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -90,7 +92,21 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -la'
+alias das='cd /Users/mayru/Lectures/applied_statistics/'
 
 # Enable Vim style navigation
 bindkey -v
 bindkey jk vi-cmd-mode
+
+# Add docker convienience functions
+FORMAT="\nID\t{{.ID}}\nIMAGE\t{{.Image}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.RunningFor}}\nSTATUS\t{{.Status}}\nPORTS\t{{.Ports}}\nNAMES\t{{.Names}}\n"
+
+alias dps='docker ps --format $FORMAT'
+
+# Kubernets alias
+source <(kubectl completion zsh)
+alias k=kubectl
+
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
