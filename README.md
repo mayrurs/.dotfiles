@@ -1,4 +1,4 @@
-# Configuration file for dev setutp 
+# Configuration file for dev setup
 
 ## Install zsh as standard shell
 
