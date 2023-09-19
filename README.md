@@ -8,6 +8,8 @@ Install zsh (default shell on mac but required on Ubuntu)
 Install ohmyzsh
 `sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
+This will automatically create the `~/.zshrc` config file. 
+
 Set zsh as default shell on Ubuntu: 
 `sudo chsh -s $(which zsh)`
 
@@ -28,7 +30,17 @@ bindkey -v
 bindkey -M viins 'jk' vi-cmd-mode
 ```
 
-(Optional) Install Tmux and Neovim 
+## (Optional) Install Tmux
 
+`sudo apt-get install tmux` 
+
+To use the configuration provided within this repo, clone the repo and create a soft link for the config file. 
+`cd <destination-folder> && git clone https://github.com/mayrurs/.dotfiles.git`
+`ln -s ~/<destination-folder>/.doftiles/.tmux.conf ~/.tmux.conf`
+
+Reload tmux configuration
+`tmux source-file ~/.tmux.conf`
+
+## (Optional) Install and customize Neovim
 Clone [neovim]("https://github.com/mayrurs/neovim-lua") and follow the 
 instruction in README.md
