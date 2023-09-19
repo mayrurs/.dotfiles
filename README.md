@@ -13,11 +13,11 @@ Set zsh as default shell on Ubuntu:
 
 (Optional) Install Powerlevel10k
 
-First follow installation for fonts on ['powerlevel10k]("https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k"). 
+First follow installation for fonts on [powerlevel10k]("https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k"). 
 Then clone plugin from github:
 `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
 
-To activate the settingss set `ZSH_THEME="powerlevel10k/powerlevel10k"`in `~/.zshrc`
+To activate the settingss set `ZSH_THEME="powerlevel10k/powerlevel10k"`in `~/.zshrc` and source `source ~/.zshrc`. This will open the powerlevel configuration tool.
 
 (Optional) Vim bindings for zsh shell
 
