@@ -1,0 +1,68 @@
+# Alacritty config (TOML)
+
+[window]
+decorations = "full"
+dynamic_padding = true
+opacity = 0.95
+padding = { x = 6, y = 6 }
+startup_mode = "Maximized"   # starts maximized; F11 toggles fullscreen
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold   = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+size = 12.0
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+
+[colors.primary]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[colors.normal]
+black   = "#45475a"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#f5c2e7"
+cyan    = "#94e2d5"
+white   = "#bac2de"
+
+[colors.bright]
+black   = "#585b70"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#f5c2e7"
+cyan    = "#94e2d5"
+white   = "#a6adc8"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+# --- Run zsh, then attach/create tmux session "main" ---
+[shell]
+program = "/usr/bin/zsh"
+args = ["-lc", "tmux attach -t main || tmux new -s main"]
+
+# --- Key bindings ---
+# Copy/Paste (Ctrl+Shift+C / Ctrl+Shift+V)
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+# Toggle fullscreen with F11
+[[keyboard.bindings]]
+key = "F11"
+action = "ToggleFullscreen"
+
