@@ -112,6 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias tree='tree -I "node_modules|.git|__pycache__|venv|dist"'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -119,3 +120,10 @@ source $ZSH/oh-my-zsh.sh
 # Expand vi-mode mappings
 bindkey -M viins 'jk' vi-cmd-mode
 export KEYTIMEOUT=10
+
+# Add neovim to the path
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
