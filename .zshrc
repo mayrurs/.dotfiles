@@ -113,7 +113,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias tree='tree -I "node_modules|.git|__pycache__|venv|dist"'
-alias devenv='docker compose run --rm python-dev'
+alias devenv='cd ${HOME}/devcontainer && docker compose run --rm python-dev'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -128,3 +128,8 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Ensure npm global packages are in PATH (for devcontainer)
+if [ -n "$DEVCONTAINER" ]; then
+  export PATH="$PATH:/usr/local/share/npm-global/bin"
+fi
