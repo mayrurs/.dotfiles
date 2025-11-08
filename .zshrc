@@ -122,8 +122,6 @@ alias devenv='cd ${HOME}/devcontainer && docker compose run --rm python-dev'
 bindkey -M viins 'jk' vi-cmd-mode
 export KEYTIMEOUT=10
 
-# Add neovim to the path
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
